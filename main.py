@@ -30,6 +30,7 @@ def main():
         description="Identify objects in an image using YOLOv5",
         examples=[[path] for path in image_paths],  # Optional: Provide example images
         allow_flagging="never",
+        theme="gradio/monochrome",
     )
 
     # Launch the Gradio app
