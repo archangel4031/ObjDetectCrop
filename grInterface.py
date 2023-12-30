@@ -76,5 +76,5 @@ def process_and_show(image, conf_threshold=0.25):
     # Draw bounding boxes and crop the detected objects
     pil_img, cropped_images = draw_boxes_and_crop(results, image, conf_threshold)
     # Extract PIL Image for Gradio Output
-    pil_cropped_images = [pil_img for _, _, pil_img in cropped_images]
+    pil_cropped_images = [(pil_img, label) for label, _, pil_img in cropped_images]
     return pil_img, pil_cropped_images
